@@ -26,7 +26,7 @@ D --> I(creación pagina)
 Z(todas las páginas)--> Y(fase TDD)
 Y --> X(correrca implementación)
 Y -- si no funciona fase inicial--> Z
-````	
+```
 
 
 	

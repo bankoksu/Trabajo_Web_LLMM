@@ -7,19 +7,27 @@
 
 ##  diagrama
 
-```flow 
-st=>star:página inicial  
-e=>página terminada
-op=>operation: trabajo sobre la página
-cond=>página mapas
-cond=>página registro
-cond=>página noticias
-cond=>página guía 
 
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
+```mermaid
+graph LR
+A[requisitos funcionales] --> B(pagina mapas)
+A --> C(página guia)
+A --> E(página inicio)
+A --> F(noticias)
+A --> G(galería)
+A --> H(página registro)
+B --> D{validador W3C}
+C --> D
+E --> D
+F --> D
+G --> D
+H --> D
+D --> I(creación pagina)
+Z(todas las páginas)--> Y(fase TDD)
+Y --> X(correrca implementación)
+Y -- si no funciona fase inicial--> Z
+````	
+
 
 	
 
